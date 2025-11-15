@@ -2,31 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>Apexia Inspired · Professional Homepage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Google Fonts: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/ea4bd4e6ad.js" crossorigin="anonymous"></script>
+  
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-  <header class="site-header">
-    <div class="container">
-      <a class="brand" href="index.html">MySite</a>
-      <button id="navToggle">Menu</button>
-      <nav id="mainNav" class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+  <!-- Navigation -->
+  <nav class="fixed w-full bg-white shadow z-50">
+    <div class="container mx-auto flex justify-between items-center py-3 px-4">
+      <a href="#" class="text-2xl font-bold text-teal-500">Apexia</a>
+      <div class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-teal-500 font-semibold">Home</a>
+        <a href="about.html" class="hover:text-teal-500 font-semibold">About</a>
+        <a href="contact.html" class="hover:text-teal-500 font-semibold">Contact</a>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-2xl text-gray-700 focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-  </header>
+    <div id="mobile-menu" class="md:hidden bg-white shadow-lg px-4 py-2 hidden">
+      <a href="index.html" class="block py-2 hover:text-teal-500 font-semibold">Home</a>
+      <a href="about.html" class="block py-2 hover:text-teal-500 font-semibold">About</a>
+      <a href="contact.html" class="block py-2 hover:text-teal-500 font-semibold">Contact</a>
+    </div>
+  </nav>
 
-  <main class="container">
-    <section class="hero">
-      <h1>Welcome to MySite</h1>
-      <p>This is a starter website created with HTML, CSS and JavaScript.</p>
-    </section>
-  </main>
+  <!-- Hero Section -->
+  <section class="pt-28 pb-16 bg-gradient-to-br from-teal-500 to-blue-700 text-white" data-aos="fade-up">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+      <div class="md:w-1/2">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Grow Your Digital Presence</h1>
+        <p class="mb-6 text-lg md:text-xl">Specialized solutions for Salesforce Commerce Cloud, Magento, and Shopify—empowering businesses to scale efficiently and innovate.</p>
+        <a href="contact.html" class="inline-block px-8 py-3 bg-white text-teal-600 font-bold rounded shadow hover:bg-teal-500 hover:text-white transition duration-300">Get Started</a>
+      </div>
+      <div class="md:w-1/2 flex justify-center pt-8 md:pt-0">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Digital Web" class="rounded-xl shadow-lg w-80 h-80 object-cover" data-aos="zoom-in"/>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services -->
+  <section class="py-16 bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Our Expertise</h2>
+      <div class="flex flex-col md:flex-row gap-8 justify-center items-center md:items-stretch">
+        <div class="bg-gray-100 rounded-xl shadow-md p-8 flex-1 text-center hover:shadow-xl transition group" data-aos="fade-right">
+          <i class="fab fa-salesforce text-4xl text-blue-500 mb-3"></i>
+          <h3 class="font-semibold text-xl mb-2 group-hover:text-blue-600 transition">Salesforce</h3>
+          <p>Certified Salesforce consulting, implementation, and customization for streamlined CRM and business automation.</p>
+        </div>
+        <div class="bg-gray-100 rounded-xl shadow-md p-8 flex-1 text-center hover:shadow-xl transition group" data-aos="fade-up">
+          <i class="fab fa-magento text-4xl text-orange-500 mb-3"></i>
+          <h3 class="font-semibold text-xl mb-2 group-hover:text-orange-500 transition">Magento</h3>
+          <p>Robust Magento eCommerce solutions: development, migration, integrations, and performance optimization.</p>
+        </div>
+        <div class="bg-gray-100 rounded-xl shadow-md p-8 flex-1 text-center hover:shadow-xl transition group" data-aos="fade-left">
+          <i class="fab fa-shopify text-4xl text-green-500 mb-3"></i>
+          <h3 class="font-semibold text-xl mb-2 group-hover:text-green-500 transition">Shopify</h3>
+          <p>End-to-end Shopify services—theme development, app integration, and ongoing store support for growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script src="js/main.js"></script>
+  <!-- About/Features Section -->
+  <section class="py-14 bg-teal-50" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <div class="md:flex md:items-center md:gap-12">
+        <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="About Team" class="rounded-xl shadow-md object-cover w-full h-64">
+        </div>
+        <div class="md:w-1/2" data-aos="fade-left">
+          <h2 class="text-2xl font-bold mb-4 text-teal-600">Why Apexia?</h2>
+          <ul class="space-y-3">
+            <li><i class="fas fa-check-circle text-teal-500 mr-2"></i> Trusted expertise in top platforms</li>
+            <li><i class="fas fa-check-circle text-teal-500 mr-2"></i> Agile delivery & tailored solutions</li>
+            <li><i class="fas fa-check-circle text-teal-500 mr-2"></i> Dedicated support, every step</li>
+            <li><i class="fas fa-check-circle text-teal-500 mr-2"></i> Proven results for global clients</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white pt-10 pb-6 mt-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between border-b border-gray-600 pb-6 mb-4">
+        <div class="mb-6 md:mb-0">
+          <span class="text-2xl font-bold text-teal-400">Apexia</span>
+          <p class="text-gray-400 mt-2 text-sm">Enterprise IT Services & Digital Transformation</p>
+        </div>
+        <div class="flex space-x-8">
+          <div>
+            <h4 class="font-semibold mb-2">Company</h4>
+            <ul>
+              <li><a href="about.html" class="text-gray-300 hover:text-teal-400 text-sm">About Us</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-teal-400 text-sm">Careers</a></li>
+              <li><a href="contact.html" class="text-gray-300 hover:text-teal-400 text-sm">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-2">Services</h4>
+            <ul>
+              <li><a href="#" class="text-gray-300 hover:text-teal-400 text-sm">Salesforce</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-teal-400 text-sm">Magento</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-teal-400 text-sm">Shopify</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-2">Contact</h4>
+            <ul>
+              <li class="text-gray-300 text-sm">
+                <i class="fas fa-phone-alt mr-2"></i>
+                <span>+1 (234) 567-8212</span>
+              </li>
+              <li class="text-gray-300 text-sm">
+                <i class="fas fa-envelope mr-2"></i>
+                <span>info@Apexia.com</span>
+              </li>
+              <li class="text-gray-300 text-sm">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <span>123 Innovation Drive, Suite 100</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-gray-400 text-xs">
+        &copy; 2025 Apexia. All rights reserved. | Made by Waqar
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    // Mobile Menu Toggle
+    document.getElementById('mobile-menu-btn').onclick = function() {
+      var mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    };
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
